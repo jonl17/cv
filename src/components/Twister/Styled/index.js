@@ -22,7 +22,7 @@ const ContainerStyle = css`
   position: absolute;
   top: 55%;
   left: 50%;
-  border: 4px solid blue;
+  /* border: 4px solid blue; */
   transition: ${transition};
   animation: ${introLoad} 0.6s ease-in-out 0s;
 `
