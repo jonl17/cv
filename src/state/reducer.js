@@ -1,7 +1,9 @@
-import { SET_DEVICE } from "./action"
+import { SET_DEVICE, TURN, REGISTER_LOCATION } from "./action"
 
 const initialState = {
   device: undefined,
+  rotation: `0deg`,
+  location: `/valin-verk/`,
 }
 
 export default (state = initialState, action) => {
@@ -18,6 +20,10 @@ export default (state = initialState, action) => {
         device = `browser`
       }
       return { ...state, device: device }
+    case TURN:
+      return { ...state, rotation: action.deg }
+    case REGISTER_LOCATION:
+      return { ...state, location: action.location }
     default:
       return state
   }

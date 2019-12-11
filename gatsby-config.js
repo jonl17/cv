@@ -5,6 +5,54 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `Jón Gabríel Lorange`,
+    subtitle: `Web developer`,
+    siteurl: `https://www.jongalor.com`,
+    menuitems: [
+      { title: `Um mig`, url: `/um-mig/`, rotation: `-90deg` },
+      { title: `Verk`, url: `/valin-verk/`, rotation: `0deg` },
+      { title: `Stakkur`, url: `/stakkur/`, rotation: `90deg` },
+    ],
+    selectedWorks: [
+      {
+        name: `Borgarlínan`,
+        url: `https://www.borgarlinan.is/`,
+        live: true,
+        year: `2019`,
+      },
+      {
+        name: `Jól í hjarta`,
+        url: `https://www.jolihjarta.is/`,
+        live: true,
+        year: `2019`,
+      },
+      {
+        name: `TVIST - auglýsingastofa`,
+        url: `https://tvist.is/radio/`,
+        live: true,
+        year: `2018-2019`,
+      },
+      {
+        name: `Emma Heiðarsdóttir - visual artist`,
+        url: `https://emmaheidarsdottir.info/`,
+        live: true,
+        year: `2018-2019`,
+      },
+      {
+        name: `Listvitinn`,
+        url: `https://listvitinn.art/`,
+        live: false,
+        year: `2019`,
+      },
+      {
+        name: `Katrín Agnes Klar - visual artist`,
+        url: `https://katrinagnes.com/prufa/`,
+        live: false,
+        year: `2019`,
+      },
+    ],
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -30,5 +78,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-layout`,
   ],
 }
