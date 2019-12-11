@@ -12,6 +12,6 @@ export const rotations = {
 export const transition = `0.5s ease-in-out`
 
 export const BOXSIZE = {
-  browser: 400,
-  mobile: 300,
+  browser: 500,
+  mobile: 350,
 }

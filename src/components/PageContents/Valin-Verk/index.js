@@ -1,6 +1,7 @@
 import React from "react"
 import { Container, Listi } from "./Styled"
 import { graphql, StaticQuery } from "gatsby"
+import { useSelector } from "react-redux"
 
 /** components */
 import Verk from "./Verk"
@@ -13,8 +14,9 @@ const ValinVerk = ({
     },
   },
 }) => {
+  const device = useSelector(state => state.reducer.device)
   return (
-    <Container rotation={rotation}>
+    <Container device={device} rotation={rotation}>
       <Listi>
         {selectedWorks.map(verk => (
           <Verk verk={verk}></Verk>

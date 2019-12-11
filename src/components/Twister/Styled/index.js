@@ -61,7 +61,8 @@ const TitleStyle = css`
   width: 100%;
   text-align: center;
   height: 100%;
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 20px;
 `
 
 export const Title = styled.p`
@@ -71,6 +72,7 @@ export const Title = styled.p`
     css`
       transform: rotate(90deg);
       right: -${BOXSIZE.browser / 10}px;
+      transform-origin: 45% 45%;
       ${props =>
         props.device === `mobile` &&
         css`
@@ -80,7 +82,7 @@ export const Title = styled.p`
   ${props =>
     props.center &&
     css`
-      top: -${BOXSIZE.browser / 10}px;
+      top: 0;
       ${props =>
         props.device === `mobile` &&
         css`
@@ -92,10 +94,23 @@ export const Title = styled.p`
     css`
       transform: rotate(-90deg);
       left: -${BOXSIZE.browser / 10}px;
+      transform-origin: 55% 45%;
       ${props =>
         props.device === `mobile` &&
         css`
           left: -${BOXSIZE.mobile / 10}px;
         `}
     `}
+    ${props =>
+      props.bottom &&
+      css`
+        transform: rotate(-180deg);
+        left: -${BOXSIZE.browser / 10}px;
+        transform-origin: 55% 50%;
+        ${props =>
+          props.device === `mobile` &&
+          css`
+            left: -${BOXSIZE.mobile / 10}px;
+          `}
+      `}
 `

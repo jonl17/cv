@@ -1,17 +1,17 @@
 import styled from "styled-components"
+import Img from "gatsby-image"
 import { ContainerStyle } from "../../Shared"
 
 export const Container = styled.div`
   ${ContainerStyle};
 `
-
-export const Listi = styled.ul`
+export const ImageContainer = styled.div`
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  display: grid;
+`
+export const Image = styled(Img)`
+  margin: auto;
+  width: 100%;
+  height: 100%;
 `

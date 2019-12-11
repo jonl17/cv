@@ -1,14 +1,39 @@
 import React from "react"
-import { connect } from "react-redux"
-import Frontpage from "../components/Frontpage"
+import { graphql } from "gatsby"
+import { findRotationFromPathname, reverseRotation } from "../methods"
 
-const index = ({ device }) => {
-  console.log(device)
-  return <Frontpage></Frontpage>
+/** components */
+import FrontpageComponent from "../components/PageContents/Frontpage"
+
+const index = ({
+  location: { pathname },
+  data: {
+    site: {
+      siteMetadata: { menuitems },
+    },
+  },
+}) => {
+  /** we need to make sure to reverse the global rotation, so that this components is turning up */
+  const rotation = findRotationFromPathname(pathname, menuitems)
+  return (
+    <FrontpageComponent
+      rotation={reverseRotation(rotation)}
+    ></FrontpageComponent>
+  )
 }
 
-const mapStateToProps = state => ({
-  device: state.reducer.device,
-})
+export const query = graphql`
+  {
+    site {
+      siteMetadata {
+        menuitems {
+          title
+          rotation
+          url
+        }
+      }
+    }
+  }
+`
 
-export default connect(mapStateToProps)(index)
+export default index

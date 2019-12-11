@@ -31,6 +31,9 @@ const Twister = ({
       <Title device={device} left>
         Stakkur
       </Title>
+      <Title device={device} bottom>
+        Jón Gabríel Lorange
+      </Title>
       {children}
     </Container>
   )
