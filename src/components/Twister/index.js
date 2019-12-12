@@ -27,6 +27,7 @@ const Twister = ({
           <BTN to={item.url}>{item.title}</BTN>
         </Title>
       ))}
+      {children}
     </Container>
   )
 }

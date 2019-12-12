@@ -21,11 +21,12 @@ const introLoad = keyframes`
 
 const ContainerStyle = css`
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
-  /* border: 4px solid blue; */
+  border: 2px solid black;
   transition: ${transition};
   animation: ${introLoad} 0.6s ease-in-out 0s;
+  background: white;
 `
 /** here we handle props */
 export const Container = styled.div`
@@ -63,26 +64,24 @@ const TitleStyle = css`
   text-align: center;
   height: 100%;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 23px;
   pointer-events: none;
+  z-index: 10;
+  box-sizing: border-box;
+  padding-top: 15px;
 `
-export const Item = styled(Link)`
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  transition: 0.2s ease-in-out;
-  text-decoration: none;
-  &&:hover {
-    background: white;
-    cursor: pointer;
-    transform: scale(1.06);
-  }
-`
+
 export const BTN = styled(Link)`
   text-decoration: none;
   pointer-events: all;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  z-index: 10;
+  opacity: 1;
+  color: black;
+  &&:hover {
+    opacity: 0.8;
+  }
 `
 export const Title = styled.p`
   ${TitleStyle};
@@ -101,7 +100,7 @@ export const Title = styled.p`
   ${props =>
     props.position === `center` &&
     css`
-      top: 0;
+      bottom: 0;
       ${props =>
         props.device === `mobile` &&
         css`

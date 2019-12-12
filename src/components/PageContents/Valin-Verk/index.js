@@ -18,9 +18,14 @@ const ValinVerk = ({
   return (
     <Container device={device} rotation={rotation}>
       <Listi>
-        {selectedWorks.map(verk => (
-          <Verk verk={verk}></Verk>
-        ))}
+        {selectedWorks.map(
+          (verk, index) =>
+            index < 6 ? (
+              <Verk verk={verk}></Verk>
+            ) : (
+              ""
+            ) /** limit to these four */
+        )}
       </Listi>
     </Container>
   )

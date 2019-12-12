@@ -12,7 +12,7 @@ const ContainerStyle = css`
   position: absolute;
   top: 0;
   left: 0;
-  background: ${COLORS.red};
+  background: white;
   background-size: 700% 700%;
   animation: ${BackgroundMove} 50s ease infinite;
   /** centering */

@@ -18,13 +18,13 @@ module.exports = {
         position: `right`,
       },
       {
-        title: `Verk`,
+        title: `Valin verk`,
         url: `/valin-verk/`,
         rotation: `0deg`,
         position: `center`,
       },
       {
-        title: `Stakkur`,
+        title: `Uppáhalds stakkur`,
         url: `/stakkur/`,
         rotation: `90deg`,
         position: `left`,

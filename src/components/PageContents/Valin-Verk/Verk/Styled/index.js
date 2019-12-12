@@ -3,7 +3,7 @@ import { COLORS } from "../../../../../constants"
 
 export const Hlutur = styled.a`
   text-decoration: none;
-  background: white;
+  /* background: white; */
   width: 100%;
   height: 100%;
   margin: 5px 0 5px 0;
@@ -11,11 +11,11 @@ export const Hlutur = styled.a`
   justify-content: space-evenly;
   align-content: center;
   &&:hover {
-    background: ${COLORS.red};
+    background: ${COLORS.black};
   }
 `
 export const Texti = styled.p`
-  color: ${COLORS.regularRed};
+  color: black;
   ${Hlutur}:hover & {
     color: white;
   }
@@ -27,9 +27,10 @@ export const Texti = styled.p`
       font-size: 13px;
     `}
   font-weight: bold;
+  margin: auto;
 `
 export const InProcess = styled.span`
-  color: ${COLORS.regularRed};
+  color: black;
   ${Hlutur}:hover & {
     color: white;
   }

@@ -6,7 +6,7 @@ import { setDevice, registerLocation } from "../state/action"
 /** components */
 import { GlobalStyle } from "../components/GlobalStyle"
 import SEO from "../components/SEO"
-import Header from "../components/Header"
+import GitLogo from "../components/GitLogo"
 import Twister from "../components/Twister"
 
 class Layout extends React.Component {
@@ -38,7 +38,7 @@ class Layout extends React.Component {
       <Container pathname={pathname}>
         <GlobalStyle></GlobalStyle>
         <SEO></SEO>
-        {/* <Header></Header> */}
+        <GitLogo></GitLogo>
         <Twister> {children}</Twister>
       </Container>
     ) : (

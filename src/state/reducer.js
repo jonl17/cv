@@ -11,10 +11,10 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case SET_DEVICE:
       let device
-      if (action.width <= 750) {
+      if (action.width <= 550) {
         device = `mobile`
       }
-      if (action.width > 750 && action.width <= 1050) {
+      if (action.width > 550 && action.width <= 1050) {
         device = `tablet`
       }
       if (action.width > 1050) {
