@@ -13,3 +13,7 @@ export const registerLocation = location => ({
   type: REGISTER_LOCATION,
   location,
 })
+export const SET_ALARM = "SET_ALARM"
+export const setAlarm = () => ({
+  type: SET_ALARM,
+})

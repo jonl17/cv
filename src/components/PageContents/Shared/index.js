@@ -6,5 +6,5 @@ export const ContainerStyle = css`
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  padding: 30px;
+  padding: 20px;
 `

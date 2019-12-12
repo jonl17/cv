@@ -10,10 +10,25 @@ module.exports = {
     subtitle: `Web developer`,
     siteurl: `https://www.jongalor.com`,
     menuitems: [
-      { title: `Heim`, url: `/`, rotation: `-180deg` },
-      { title: `Um mig`, url: `/um-mig/`, rotation: `-90deg` },
-      { title: `Verk`, url: `/valin-verk/`, rotation: `0deg` },
-      { title: `Stakkur`, url: `/stakkur/`, rotation: `90deg` },
+      { title: `Heim`, url: `/`, rotation: `-180deg`, position: `bottom` },
+      {
+        title: `Um mig`,
+        url: `/um-mig/`,
+        rotation: `-90deg`,
+        position: `right`,
+      },
+      {
+        title: `Verk`,
+        url: `/valin-verk/`,
+        rotation: `0deg`,
+        position: `center`,
+      },
+      {
+        title: `Stakkur`,
+        url: `/stakkur/`,
+        rotation: `90deg`,
+        position: `left`,
+      },
     ],
     selectedWorks: [
       {

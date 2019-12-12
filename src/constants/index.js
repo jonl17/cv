@@ -13,5 +13,5 @@ export const transition = `0.5s ease-in-out`
 
 export const BOXSIZE = {
   browser: 500,
-  mobile: 350,
+  mobile: 300,
 }

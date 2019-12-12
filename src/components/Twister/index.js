@@ -1,7 +1,7 @@
 import React from "react"
-import { Container, Title } from "./Styled"
+import { Container, Title, BTN } from "./Styled"
 import { graphql, StaticQuery } from "gatsby"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import { findRotationFromPathname } from "../../methods"
 
 const Twister = ({
@@ -22,19 +22,11 @@ const Twister = ({
   const device = useSelector(state => state.reducer.device)
   return (
     <Container device={device} rotation={rotation}>
-      <Title device={device} right>
-        Um mig
-      </Title>
-      <Title device={device} center>
-        Valin verk
-      </Title>
-      <Title device={device} left>
-        Stakkur
-      </Title>
-      <Title device={device} bottom>
-        Jón Gabríel Lorange
-      </Title>
-      {children}
+      {menuitems.map((item, index) => (
+        <Title key={index} position={item.position}>
+          <BTN to={item.url}>{item.title}</BTN>
+        </Title>
+      ))}
     </Container>
   )
 }
@@ -49,6 +41,7 @@ export default props => (
               title
               rotation
               url
+              position
             }
           }
         }

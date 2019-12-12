@@ -1,5 +1,6 @@
 import styled, { css, keyframes } from "styled-components"
 import { transition, BOXSIZE } from "../../../constants"
+import { Link } from "gatsby"
 
 const introLoad = keyframes`
   from {
@@ -63,12 +64,30 @@ const TitleStyle = css`
   height: 100%;
   font-weight: bold;
   font-size: 20px;
+  pointer-events: none;
 `
-
+export const Item = styled(Link)`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+  &&:hover {
+    background: white;
+    cursor: pointer;
+    transform: scale(1.06);
+  }
+`
+export const BTN = styled(Link)`
+  text-decoration: none;
+  pointer-events: all;
+`
 export const Title = styled.p`
   ${TitleStyle};
   ${props =>
-    props.right &&
+    props.position === `right` &&
     css`
       transform: rotate(90deg);
       right: -${BOXSIZE.browser / 10}px;
@@ -80,7 +99,7 @@ export const Title = styled.p`
         `}
     `}
   ${props =>
-    props.center &&
+    props.position === `center` &&
     css`
       top: 0;
       ${props =>
@@ -90,7 +109,7 @@ export const Title = styled.p`
         `}
     `}
   ${props =>
-    props.left &&
+    props.position === `left` &&
     css`
       transform: rotate(-90deg);
       left: -${BOXSIZE.browser / 10}px;
@@ -102,7 +121,7 @@ export const Title = styled.p`
         `}
     `}
     ${props =>
-      props.bottom &&
+      props.position === `bottom` &&
       css`
         transform: rotate(-180deg);
         left: -${BOXSIZE.browser / 10}px;

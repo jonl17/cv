@@ -32,12 +32,13 @@ class Layout extends React.Component {
       children,
       location: { pathname },
     } = this.props
+    console.log(this.props.location)
     this.props.dispatch(registerLocation(pathname))
     return device !== undefined ? (
       <Container pathname={pathname}>
         <GlobalStyle></GlobalStyle>
         <SEO></SEO>
-        <Header></Header>
+        {/* <Header></Header> */}
         <Twister> {children}</Twister>
       </Container>
     ) : (
