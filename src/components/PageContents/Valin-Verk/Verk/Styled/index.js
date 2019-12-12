@@ -11,11 +11,15 @@ export const Hlutur = styled.a`
   justify-content: space-evenly;
   align-content: center;
   &&:hover {
-    background: ${COLORS.black};
+    background: rgb(
+      ${props => props.rgb},
+      ${props => props.rgb},
+      ${props => props.rgb}
+    );
   }
 `
 export const Texti = styled.p`
-  color: black;
+  color: gray;
   ${Hlutur}:hover & {
     color: white;
   }
@@ -27,7 +31,7 @@ export const Texti = styled.p`
       font-size: 13px;
     `}
   font-weight: bold;
-  margin: auto;
+  margin: auto auto auto 50px;
 `
 export const InProcess = styled.span`
   color: black;

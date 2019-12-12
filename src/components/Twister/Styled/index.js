@@ -18,6 +18,18 @@ const introLoad = keyframes`
     opacity: 1;
   }
 `
+export const BTN = styled(Link)`
+  text-decoration: none;
+  pointer-events: all;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  z-index: 10;
+  opacity: 1;
+  color: black;
+  &&:hover {
+    color: gray;
+  }
+`
 
 const ContainerStyle = css`
   position: absolute;
@@ -71,18 +83,6 @@ const TitleStyle = css`
   padding-top: 15px;
 `
 
-export const BTN = styled(Link)`
-  text-decoration: none;
-  pointer-events: all;
-  transition: 0.2s ease-in-out;
-  text-transform: uppercase;
-  z-index: 10;
-  opacity: 1;
-  color: black;
-  &&:hover {
-    opacity: 0.8;
-  }
-`
 export const Title = styled.p`
   ${TitleStyle};
   ${props =>
@@ -91,6 +91,7 @@ export const Title = styled.p`
       transform: rotate(90deg);
       right: -${BOXSIZE.browser / 10}px;
       transform-origin: 45% 45%;
+
       ${props =>
         props.device === `mobile` &&
         css`
@@ -100,7 +101,6 @@ export const Title = styled.p`
   ${props =>
     props.position === `center` &&
     css`
-      bottom: 0;
       ${props =>
         props.device === `mobile` &&
         css`
@@ -111,8 +111,12 @@ export const Title = styled.p`
     props.position === `left` &&
     css`
       transform: rotate(-90deg);
-      left: -${BOXSIZE.browser / 10}px;
       transform-origin: 55% 45%;
+      ${props =>
+        props.device === `browser` &&
+        css`
+          left: -${BOXSIZE.browser / 10}px;
+        `}
       ${props =>
         props.device === `mobile` &&
         css`

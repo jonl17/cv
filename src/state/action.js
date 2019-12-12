@@ -17,3 +17,7 @@ export const SET_ALARM = "SET_ALARM"
 export const setAlarm = () => ({
   type: SET_ALARM,
 })
+export const INCREMENT_RGB = "INCREMENT_RGB"
+export const incrementRGB = () => ({
+  type: INCREMENT_RGB,
+})

@@ -6,6 +6,10 @@ import { useSelector } from "react-redux"
 /** components */
 import Verk from "./Verk"
 
+const incrRGB = rgb => {
+  return rgb + 20
+}
+
 const ValinVerk = ({
   rotation,
   data: {
@@ -15,16 +19,15 @@ const ValinVerk = ({
   },
 }) => {
   const device = useSelector(state => state.reducer.device)
+  var rgb = 88
   return (
     <Container device={device} rotation={rotation}>
       <Listi>
         {selectedWorks.map(
-          (verk, index) =>
-            index < 6 ? (
-              <Verk verk={verk}></Verk>
-            ) : (
-              ""
-            ) /** limit to these four */
+          (verk, index) => (
+            (rgb = incrRGB(rgb)),
+            <Verk rgb={rgb} key={index} verk={verk}></Verk>
+          )
         )}
       </Listi>
     </Container>

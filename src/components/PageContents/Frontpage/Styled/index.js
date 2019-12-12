@@ -12,6 +12,7 @@ export const ImageContainer = styled.div`
 `
 export const Image = styled(Img)`
   margin: auto;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   transition: 0.2s ease-in-out;

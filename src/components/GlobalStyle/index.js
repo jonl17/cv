@@ -13,7 +13,6 @@ export const GlobalStyle = createGlobalStyle`
     }
     * {
         font-family: "Helvetica Neue Bd";
-        font-weight: normal;
     }
     html, body {
         margin: 0;

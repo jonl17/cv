@@ -9,8 +9,23 @@ module.exports = {
     title: `Jón Gabríel Lorange`,
     subtitle: `Web developer`,
     siteurl: `https://www.jongalor.com`,
+    mail: `jglorange@gmail.com`,
+    about: [
+      `Jón Gabríel Lorange er tónlistarmaður & vefforritari búsettur í Reykjavík.`,
+    ],
+    kunatta: {
+      languages: `JavaScript, Python, Java, C++, HTML5, CSS3, SQL.`,
+      frameworks: `React, Redux, jQuery.`,
+      other: `GatsbyJS, Netlify, Styled-Components, Hygen, Git, NetlifyCMS, Contentful, Wordpress.`,
+      favourite: `JavaScript, GatsbyJS, Netlify, NetlifyCMS, React/Redux, Styled-components, Hygen, Git.`,
+    },
     menuitems: [
-      { title: `Heim`, url: `/`, rotation: `-180deg`, position: `bottom` },
+      {
+        title: `Jón Gabríel Lorange`,
+        url: `/`,
+        rotation: `-180deg`,
+        position: `bottom`,
+      },
       {
         title: `Um mig`,
         url: `/um-mig/`,
@@ -24,8 +39,8 @@ module.exports = {
         position: `left`,
       },
       {
-        title: `Uppáhalds stakkur`,
-        url: `/stakkur/`,
+        title: `Kunnátta`,
+        url: `/kunatta/`,
         rotation: `0deg`,
         position: `center`,
       },

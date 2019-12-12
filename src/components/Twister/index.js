@@ -20,10 +20,11 @@ const Twister = ({
     menuitems
   ) /** this simple method finds the correct rotation  */
   const device = useSelector(state => state.reducer.device)
+  console.log(device)
   return (
     <Container device={device} rotation={rotation}>
       {menuitems.map((item, index) => (
-        <Title key={index} position={item.position}>
+        <Title device={device} key={index} position={item.position}>
           <BTN to={item.url}>{item.title}</BTN>
         </Title>
       ))}
