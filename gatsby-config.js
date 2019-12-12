@@ -20,14 +20,14 @@ module.exports = {
       {
         title: `Valin verk`,
         url: `/valin-verk/`,
-        rotation: `0deg`,
-        position: `center`,
+        rotation: `90deg`,
+        position: `left`,
       },
       {
         title: `Uppáhalds stakkur`,
         url: `/stakkur/`,
-        rotation: `90deg`,
-        position: `left`,
+        rotation: `0deg`,
+        position: `center`,
       },
     ],
     selectedWorks: [
