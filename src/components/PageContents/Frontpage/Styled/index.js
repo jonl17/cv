@@ -14,4 +14,9 @@ export const Image = styled(Img)`
   margin: auto;
   width: 100%;
   height: 100%;
+  transition: 0.2s ease-in-out;
+  filter: grayscale(100%); /* FF 35+ */
+  &&:hover {
+    filter: grayscale(0%); /* FF 35+ */
+  }
 `

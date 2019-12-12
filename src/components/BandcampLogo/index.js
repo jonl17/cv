@@ -2,7 +2,7 @@ import React from "react"
 import { ImageContainer, Logo } from "./Styled"
 import { graphql, StaticQuery } from "gatsby"
 
-const GitLogo = ({
+const BandcampLogo = ({
   data: {
     file: {
       childImageSharp: { fluid },
@@ -10,7 +10,7 @@ const GitLogo = ({
   },
 }) => {
   return (
-    <ImageContainer href="https://github.com/jonl17" target="_blank">
+    <ImageContainer href="https://tssforu.bandcamp.com/" target="_blank">
       <Logo fluid={fluid}></Logo>
     </ImageContainer>
   )
@@ -20,7 +20,9 @@ export default props => (
   <StaticQuery
     query={graphql`
       {
-        file(childImageSharp: { fluid: { originalName: { eq: "git.png" } } }) {
+        file(
+          childImageSharp: { fluid: { originalName: { eq: "bandcamp.png" } } }
+        ) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid_tracedSVG
@@ -29,6 +31,6 @@ export default props => (
         }
       }
     `}
-    render={data => <GitLogo data={data} {...props}></GitLogo>}
+    render={data => <BandcampLogo data={data} {...props}></BandcampLogo>}
   ></StaticQuery>
 )

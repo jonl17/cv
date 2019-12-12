@@ -7,6 +7,7 @@ import { setDevice, registerLocation } from "../state/action"
 import { GlobalStyle } from "../components/GlobalStyle"
 import SEO from "../components/SEO"
 import GitLogo from "../components/GitLogo"
+import BClogo from "../components/BandcampLogo"
 import Twister from "../components/Twister"
 
 class Layout extends React.Component {
@@ -39,6 +40,7 @@ class Layout extends React.Component {
         <GlobalStyle></GlobalStyle>
         <SEO></SEO>
         <GitLogo></GitLogo>
+        <BClogo></BClogo>
         <Twister> {children}</Twister>
       </Container>
     ) : (

@@ -28,11 +28,9 @@ export default props => (
   <StaticQuery
     query={graphql`
       {
-        file(
-          childImageSharp: { fluid: { originalName: { eq: "nonni.jpg" } } }
-        ) {
+        file(childImageSharp: { fluid: { originalName: { eq: "me.jpg" } } }) {
           childImageSharp {
-            fluid {
+            fluid(quality: 100) {
               ...GatsbyImageSharpFluid_tracedSVG
             }
           }

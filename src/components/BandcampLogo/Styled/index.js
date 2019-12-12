@@ -5,7 +5,7 @@ export const ImageContainer = styled.a`
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 0;
+  top: 55px;
   right: 0;
   display: inline-block;
   padding: 10px;
