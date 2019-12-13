@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components"
+import { css } from "styled-components"
 
 export const ContainerStyle = css`
   transition: 0.2s ease-in-out;

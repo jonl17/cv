@@ -102,9 +102,14 @@ export const Title = styled.p`
     props.position === `center` &&
     css`
       ${props =>
+        props.device === `tablet` &&
+        css`
+          top: 0;
+        `}
+      ${props =>
         props.device === `mobile` &&
         css`
-          top: -${BOXSIZE.mobile / 10}px;
+          top: 0;
         `}
     `}
   ${props =>
@@ -116,6 +121,11 @@ export const Title = styled.p`
         props.device === `browser` &&
         css`
           left: -${BOXSIZE.browser / 10}px;
+        `}
+      ${props =>
+        props.device === `tablet` &&
+        css`
+          transform-origin: 50% 50%;
         `}
       ${props =>
         props.device === `mobile` &&

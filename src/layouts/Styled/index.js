@@ -1,5 +1,4 @@
 import styled, { keyframes, css } from "styled-components"
-import { COLORS } from "../../constants"
 
 const BackgroundMove = keyframes`
     0%{background-position:51% 0%}

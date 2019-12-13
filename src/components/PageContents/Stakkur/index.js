@@ -16,10 +16,10 @@ const Stakkur = ({
   const device = useSelector(state => state.reducer.device)
   return (
     <Container device={device} rotation={rotation}>
-      <Text>Forritunarmál: {languages}</Text>
-      <Text>Framework: {frameworks}</Text>
-      <Text>Annað: {other}</Text>
-      <Text>
+      <Text device={device}>Forritunarmál: {languages}</Text>
+      <Text device={device}>Framework: {frameworks}</Text>
+      <Text device={device}>Annað: {other}</Text>
+      <Text device={device}>
         <Favourite>Uppáhalds:</Favourite> {favourite}
       </Text>
     </Container>

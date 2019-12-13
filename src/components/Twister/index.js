@@ -1,7 +1,7 @@
 import React from "react"
 import { Container, Title, BTN } from "./Styled"
 import { graphql, StaticQuery } from "gatsby"
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector } from "react-redux"
 import { findRotationFromPathname } from "../../methods"
 
 const Twister = ({

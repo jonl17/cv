@@ -4,7 +4,6 @@ import { useSelector } from "react-redux"
 
 const Verk = ({ verk, rgb }) => {
   const device = useSelector(state => state.reducer.device)
-  console.log(rgb)
   return (
     <Hlutur rgb={rgb} target="_blank" href={verk.url}>
       <Texti device={device}>

@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components"
-import { COLORS } from "../../../../../constants"
 
 export const Hlutur = styled.a`
   text-decoration: none;
@@ -25,13 +24,14 @@ export const Texti = styled.p`
   }
   display: inline-block;
   font-size: 18px;
+  margin: auto auto auto 50px;
   ${props =>
     props.device === `mobile` &&
     css`
       font-size: 13px;
+      margin: auto auto auto 25px;
     `}
   font-weight: bold;
-  margin: auto auto auto 50px;
 `
 export const InProcess = styled.span`
   color: black;
