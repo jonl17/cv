@@ -16,8 +16,8 @@ module.exports = {
     kunatta: {
       languages: `JavaScript, Python, Java, C++, HTML5, CSS3, SQL.`,
       frameworks: `React, Redux, jQuery.`,
-      other: `GatsbyJS, Netlify, Styled-Components, Hygen, Git, NetlifyCMS, Contentful, Wordpress.`,
-      favourite: `JavaScript, GatsbyJS, Netlify, NetlifyCMS, React/Redux, Styled-components, Hygen, Git.`,
+      other: `GatsbyJS, Netlify, GraphQL, Styled-Components, Hygen, Git, NetlifyCMS, NPM, Contentful, Wordpress.`,
+      favourite: `JavaScript, GatsbyJS, Netlify, NetlifyCMS, React/Redux, GraphQL, Styled-components, Hygen, Git`,
     },
     menuitems: [
       {
