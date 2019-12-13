@@ -7,10 +7,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Helvetica Neue Bd";
     src: url(${RegFont});
     }
-    @font-face {
-    font-family: "Helvetica Neue BdIt";
-    src: url(${BoldFont});
-    }
     * {
         font-family: "Helvetica Neue Bd";
     }
