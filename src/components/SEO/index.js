@@ -4,13 +4,20 @@ import { graphql, StaticQuery } from "gatsby"
 
 const SEO = ({
   data: {
+    file: {
+      childImageSharp: { src },
+    },
     site: {
       siteMetadata: { title, subtitle },
     },
   },
 }) => (
   <>
-    <Helmet title={title + " - " + subtitle}></Helmet>
+    <Helmet title={title + " - " + subtitle}>
+      <meta name="title" content={title}></meta>
+      <meta name="description" content={subtitle}></meta>
+      <link href={src}></link>
+    </Helmet>
   </>
 )
 
@@ -22,6 +29,15 @@ export default props => (
           siteMetadata {
             title
             subtitle
+          }
+        }
+        file(
+          childImageSharp: { fluid: { originalName: { eq: "orange.png" } } }
+        ) {
+          childImageSharp {
+            fluid {
+              src
+            }
           }
         }
       }
